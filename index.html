@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Quiz System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Cloud Quiz</h1>
+            <p align="right">GROUP 1</p>
+        </header>
+
+        <main id="quiz-container">
+
+            <div class="quiz-header">
+                <span id="question-number">Question 1</span>
+                <span id="score">Score: 0</span>
+            </div>
+
+            <h2 id="question">
+                Loading question...
+            </h2>
+
+            <div id="options"></div>
+
+            <button id="next-btn">Next Question</button>
+
+        </main>
+            <div id="result-container" class="hidden">
+        <h2>Quiz Completed!</h2>
+        <p id="final-score"></p>
+        <div id="answers-review"></div>
+        <button onclick="restartQuiz()">Take Quiz Again</button>
+        <h2 class="leaderboard-title">Leaderboard</h2>
+        <div id="leaderboard">
+            Loading leaderboard...
+        </div>
+
+</div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
