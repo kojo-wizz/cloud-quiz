@@ -16,7 +16,6 @@ const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
 const questionNumberElement =
     document.getElementById("question-number");
-const scoreElement = document.getElementById("score");
 const nextButton = document.getElementById("next-btn");
 
 async function loadQuestions() {
@@ -105,7 +104,7 @@ nextButton.addEventListener("click", async function () {
 
     if (currentQuestion < questions.length) {
 
-        scoreElement.textContent = `Score: ${score}`;
+
 
         loadQuestion();
 
@@ -236,14 +235,13 @@ function restartQuiz() {
 
     currentQuestion = 0;
     score = 0;
+    userAnswers = [];
 
     document.getElementById("quiz-container")
         .classList.remove("hidden");
 
     document.getElementById("result-container")
         .classList.add("hidden");
-
-    scoreElement.textContent = "Score: 0";
 
     loadQuestion();
 }
